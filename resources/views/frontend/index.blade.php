@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ appName() }}</title>
         <meta name="description" content="@yield('meta_description', appName())">
-        <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
+        <meta name="author" content="@yield('meta_author', 'Charlie Steenhagen')">
         @yield('meta')
 
         @stack('before-styles')
@@ -63,38 +63,28 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            @if(isset($active_theme) && $active_theme->background_image() != null)
+                 body{
+                     background-color: #{{$active_theme->background_image()->getCustomProperty('color')}} !important;
+                 }
+            @endif
         </style>
+        <link rel="stylesheet" href="{{mix('css/frontend/home/home.css')}}"/>
         @stack('after-styles')
     </head>
-    <body>
+    @if(isset($active_theme) && $active_theme->background_image() != null)
+        <body data-image="{{$active_theme->background_image()->getUrl()}}" class="lazy-load">
+    @else
+        <body>
+    @endif
         @include('includes.partials.read-only')
         @include('includes.partials.logged-in-as')
         @include('includes.partials.announcements')
         @include('frontend.includes.nav')
 
-        <div id="app" class="flex-center position-ref full-height">
-{{--            <div class="top-right links">--}}
-{{--                @auth--}}
-{{--                    @if ($logged_in_user->isUser())--}}
-{{--                        <a href="{{ route('frontend.user.dashboard') }}">@lang('Dashboard')</a>--}}
-{{--                    @endif--}}
-
-{{--                    <a href="{{ route('frontend.user.account') }}">@lang('Account')</a>--}}
-{{--                @else--}}
-{{--                    <a href="{{ route('frontend.auth.login') }}">@lang('Login')</a>--}}
-
-{{--                    @if (config('boilerplate.access.user.registration'))--}}
-{{--                        <a href="{{ route('frontend.auth.register') }}">@lang('Register')</a>--}}
-{{--                    @endif--}}
-{{--                @endauth--}}
-{{--            </div><!--top-right-->--}}
-
+        <div id="app">
             <div class="content">
-                @include('includes.partials.messages')
-
-                <div class="title m-b-md">
-                    {{env('APP_NAME')}}
-                </div><!--title-->
 
             </div><!--content-->
         </div><!--app-->

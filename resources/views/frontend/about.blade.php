@@ -7,13 +7,21 @@
 @endpush
 
 @section('content')
-    <h1>About</h1>
-    @if($active_theme->resume_active && $active_theme->resume() != null)
-        <a href="{{$active_theme->resume()->getUrl()}}" target="_blank">Download Resume</a>
+    <div class="row mt-5 mb-3 text-center">
+        <div class="col m-auto">
+            <h1>
+                {{$active_theme->first_name . ' ' . $active_theme->last_name}}
+            </h1>
+        </div>
+    </div>
+    @if($active_theme->about_image() != null)
+        <div class="row mb-3">
+            <div class="col col-12 col-sm-6 m-auto text-center">
+                <img src="{{$active_theme->about_image()->getUrl()}}" class="img-fluid" alt="About Image">
+            </div>
+        </div>
     @endif
-    <p>
-        {!! $active_theme->page_content !!}
-    </p>
+    {!! $active_theme->page_content !!}
 @endsection
 
 @push('after-scripts')

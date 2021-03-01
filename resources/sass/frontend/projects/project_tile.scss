@@ -1,0 +1,67 @@
+.project-tile{
+  position: relative;
+  width: 50%;		/* desired width of project-tile */
+    overflow: hidden;
+}
+.project-tile:before{
+  content: "";
+  display: block;
+  padding-top: 100%; 	/* aspect ratio for project tile */
+}
+
+.content{
+  position:  absolute;
+  top: 15px;
+  left: 15px;
+  bottom: 15px;
+  right: 15px;
+    overflow: hidden;
+}
+
+.project-bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -moz-transition: all .5s;
+}
+
+.project-tile-title{
+  position: absolute;
+  width: 75%;
+  left: 12.5%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.project-tile-overlay{
+  color: darkslategray;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(255,255,255,.6);
+  opacity: 0;
+  transition: visibility 0s, opacity 0.25s linear;
+  cursor: pointer;
+}
+.project-tile:hover{
+    .project-tile-overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+    .project-bg{
+        height: 110%;
+        width: 110%;
+        left: -5%;
+        top: -5%;
+    }
+}

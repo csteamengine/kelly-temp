@@ -1,16 +1,16 @@
 @extends('frontend.layouts.app')
 
-@section('title', appName() . ' | ' . $project->title)
+@section('title', appName . ' | ' . $project->title)
 @section('meta_description', $project->short_description)
 @section('meta_canonical', "https://kellydevittceramics.com/gallery")
 @push('before-styles')
-    <link href="{{mix('/css/projects/project.css')}}" rel="stylesheet">
+    <link href="{{(mix('/css/projects/project.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
     <div class="row mb-5">
         <div class="col-md-6">
-            @include('frontend.projects.image_carousel', ['project' => $project, 'images' => $project->getMedia('images')])
+            @include('frontend.projects.image_carousel', ['project' => $project, 'images' => $images])
         </div>
         <div class="col-md-6 align-self-center text-center mt-3">
             <h3>{!! $project->title !!}</h3>
@@ -20,7 +20,7 @@
     </div>
 
     @include('frontend.projects.project_description', ['project' => $project])
-    @include('frontend.projects.image_list', ['images' => $project->getMedia('images')])
+    @include('frontend.projects.image_list', ['images' => $project->images()])
 @endsection
 
 @push('after-scripts')

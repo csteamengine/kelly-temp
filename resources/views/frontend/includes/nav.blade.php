@@ -1,9 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
-        <x-utils.link
-            :href="route('frontend.index')"
-            :text="appName()"
-            class="navbar-brand" />
+<nav class="navbar navbar-expand-lg navbar-light mb-4">
+    <div class="container-fluid">
+        <a href="{{ route('frontend.index') }}" class="navbar-brand">{{appName()}}</a>
+
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="@lang('Toggle navigation')">
             <span class="navbar-toggler-icon"></span>
@@ -24,21 +22,36 @@
                         @include('includes.partials.lang')
                     </li>
                 @endif
-
+                    <li class="nav-item">
+                        <x-utils.link
+                            :href="route('frontend.index')"
+                            :active="activeClass(Active::checkRoute(['frontend.index']))"
+                            :text="__('Home')"
+                            class="nav-link font-lg" />
+                    </li>
                     <li class="nav-item">
                         <x-utils.link
                             :href="route('frontend.projects')"
                             :active="activeClass(Active::checkRoute(['frontend.projects', 'frontend.projects.show']))"
-                            :text="__('Projects')"
+                            :text="__('Works')"
                             class="nav-link" />
                     </li>
-                    <li class="nav-item">
-                        <x-utils.link
-                            :href="route('frontend.blogs')"
-                            :active="activeClass(Active::checkRoute(['frontend.blogs', 'frontend.blogs.show']))"
-                            :text="__('Blogs')"
-                            class="nav-link" />
-                    </li>
+                    @if(isset($active_theme) && $active_theme->resume_active && $active_theme->resume() != null)
+                        <li class="nav-item">
+                            <x-utils.link
+                                :href="$active_theme->resume()->getUrl()"
+                                :text="__('CV')"
+                                class="nav-link"
+                                target="_blank" />
+                        </li>
+                    @endif
+{{--                    <li class="nav-item">--}}
+{{--                        <x-utils.link--}}
+{{--                            :href="route('frontend.blogs')"--}}
+{{--                            :active="activeClass(Active::checkRoute(['frontend.blogs', 'frontend.blogs.show']))"--}}
+{{--                            :text="__('Blogs')"--}}
+{{--                            class="nav-link" />--}}
+{{--                    </li>--}}
                     <li class="nav-item">
                         <x-utils.link
                             :href="route('frontend.about')"
@@ -46,13 +59,13 @@
                             :text="__('About')"
                             class="nav-link" />
                     </li>
-                    <li class="nav-item">
-                        <x-utils.link
-                            :href="route('frontend.career')"
-                            :active="activeClass(Active::checkRoute('frontend.career'))"
-                            :text="__('Career')"
-                            class="nav-link" />
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <x-utils.link--}}
+{{--                            :href="route('frontend.career')"--}}
+{{--                            :active="activeClass(Active::checkRoute('frontend.career'))"--}}
+{{--                            :text="__('Career')"--}}
+{{--                            class="nav-link" />--}}
+{{--                    </li>--}}
                     <li class="nav-item">
                         <x-utils.link
                             :href="route('frontend.contact')"

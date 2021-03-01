@@ -38,7 +38,7 @@
         @include('includes.partials.messages')
 
         <main class="container">
-            <div class="col-10 m-auto">
+            <div class="col-12 m-auto">
                 @yield('content')
             </div>
         </main>

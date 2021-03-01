@@ -1,9 +1,9 @@
 @extends('frontend.layouts.app')
 
-@section('title', __('Projects'))
+@section('title', app_name() . ' | ' . __('navs.general.projects'))
 @section('meta_canonical', "https://kellydevittceramics.com/projects")
 @push('before-styles')
-    <link href="{{mix('/css/projects/project_tile.css')}}" rel="stylesheet">
+    {{style(mix('/css/projects/project_tile.css'))}}
 @endpush
 
 @section('content')
@@ -18,5 +18,5 @@
 @endsection
 
 @push('after-scripts')
-    <script src="{{mix('js/frontend/projects.js')}}"></script>
+    {{script(mix('js/frontend/projects.js'))}}
 @endpush

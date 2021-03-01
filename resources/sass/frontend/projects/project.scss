@@ -1,0 +1,42 @@
+.carousel-inner{
+  height: 500px;
+  /*background-color: black;*/
+}
+//.carousel-control-next{
+//  background-image: linear-gradient(to right, rgba(255,255,255,0) , rgba(0,0,0,.5));
+//}
+//.carousel-control-prev{
+//  background-image: linear-gradient(to right, rgba(0,0,0,.5) , rgba(255,255,255,0));
+//}
+
+//.carousel-control-next span{
+//  color: black;
+//}
+.carousel-control-next, .carousel-control-prev {
+  filter: invert(100%);
+}
+
+.carousel-item{
+  position: relative !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  //-webkit-background-size: auto 100% !important;
+  //background-size: auto 100% !important;
+  //-webkit-background-size: cover !important;
+  //background-size: cover !important;
+}
+
+.project-image-tiles{
+  height: 150px;
+  cursor: pointer;
+}
+
+.project-image-tiles-image{
+  height: 100%;
+  width: 100%;
+  position: relative !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  -webkit-background-size: auto 100% !important;
+  background-size: auto 100% !important;
+}

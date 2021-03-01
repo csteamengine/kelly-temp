@@ -1,6 +1,8 @@
 @import "../global";
 @import "global";
 
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 // Variables
 @import 'variables';
 
@@ -8,3 +10,13 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~datatables.net-bs4/css/dataTables.bootstrap4.min.css';
 @import '~datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4.min.css';
+
+body{
+    background-color: #fcfcfc;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+}
+
+.navbar-brand{
+    font-size: 1.25rem;
+}
