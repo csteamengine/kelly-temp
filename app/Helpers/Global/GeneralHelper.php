@@ -225,3 +225,29 @@ if (! function_exists('addFileToModel')) {
         }
     }
 }
+
+if (! function_exists('displayThumbnail')) {
+
+    /**
+     * @param Media $media
+     */
+    function displayThumbnail(Media $media)
+    {
+        if ($media->mime_type == "application/pdf" || $media->mime_type == "video/mp4") {
+            return true;
+        }
+
+        return false;
+    }
+}
+
+if (! function_exists('getPlaceholder')){
+
+    /**
+     * Gets the default placeholder in /storage/app/public/img
+     */
+    function getPlaceholder(){
+        return "storage/img/placeholder.png";
+    }
+}
+
