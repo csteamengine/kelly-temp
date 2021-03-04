@@ -1,7 +1,7 @@
 @push('before-styles')
 @endpush
 
-<table id="mediaTable" class="display table table-striped table-bordered" style="width:100%">
+<table id="mediaTable" class="display table table-striped table-bordered table-responsive-lg" style="width:100%">
     <thead>
     <tr>
         <th>Order</th>

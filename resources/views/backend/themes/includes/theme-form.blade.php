@@ -200,53 +200,57 @@
     </div>
 </div>
 <div class="row mb-2">
-    <div class="col col-4 m-auto text-center " >
-        <div class="form-group">
-            {!! Form::label('background_image',"Background Image"); !!}
-            {!! Form::file('background_image', ['hidden' => 'hidden', 'id' => 'backgroundInput']); !!}
-            <div class="square img-thumbnail" role="button" data-trigger="#backgroundInput">
-                <div class="thumbnail-overlay img-thumbnail">
-                    <div class="row h-100 m-auto">
-                        <div class="col m-auto">
-                            <i class="thumbnail-icon fas fa-edit fa-2x m-auto text-light"></i>
+    <div class="col-12 col-md-10 col-lg-8 m-auto">
+        <div class="row">
+            <div class="col col-4 m-auto text-center " >
+                <div class="form-group">
+                    {!! Form::label('background_image',"Background Image"); !!}
+                    {!! Form::file('background_image', ['hidden' => 'hidden', 'id' => 'backgroundInput']); !!}
+                    <div class="square img-thumbnail" role="button" data-trigger="#backgroundInput">
+                        <div class="thumbnail-overlay img-thumbnail">
+                            <div class="row h-100 m-auto">
+                                <div class="col m-auto">
+                                    <i class="thumbnail-icon fas fa-edit fa-2x m-auto text-light"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thumbnail img-thumbnail" style="background: url('{{$theme->background_image() != null ? $theme->background_image()->getUrl('thumb') : asset(getPlaceholder())}}') center center; background-size: cover">
                         </div>
                     </div>
-                </div>
-                <div class="thumbnail img-thumbnail" style="background: url('{{$theme->background_image() != null ? $theme->background_image()->getUrl('thumb') : asset(getPlaceholder())}}') center center; background-size: cover">
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="col col-4 m-auto text-center " >
-        <div class="form-group">
-            {!! Form::label('about_image_label',"About Image"); !!}
-            {!! Form::file('about_image', ['hidden' => 'hidden', 'id' => 'aboutInput']); !!}
-            <div class="square img-thumbnail" role="button" data-trigger="#aboutInput">
-                <div class="thumbnail-overlay img-thumbnail">
-                    <div class="row h-100 m-auto">
-                        <div class="col m-auto">
-                            <i class="thumbnail-icon fas fa-edit fa-2x m-auto text-light"></i>
+            <div class="col col-4 m-auto text-center " >
+                <div class="form-group">
+                    {!! Form::label('about_image_label',"About Image"); !!}
+                    {!! Form::file('about_image', ['hidden' => 'hidden', 'id' => 'aboutInput']); !!}
+                    <div class="square img-thumbnail" role="button" data-trigger="#aboutInput">
+                        <div class="thumbnail-overlay img-thumbnail">
+                            <div class="row h-100 m-auto">
+                                <div class="col m-auto">
+                                    <i class="thumbnail-icon fas fa-edit fa-2x m-auto text-light"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thumbnail img-thumbnail" style="background: url('{{$theme->about_image() != null ? $theme->about_image()->getUrl('thumb') : asset(getPlaceholder())}}') center center; background-size: cover">
                         </div>
                     </div>
-                </div>
-                <div class="thumbnail img-thumbnail" style="background: url('{{$theme->about_image() != null ? $theme->about_image()->getUrl('thumb') : asset(getPlaceholder())}}') center center; background-size: cover">
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="col col-4 m-auto text-center " >
-        <div class="form-group">
-            {!! Form::label('resume-label',"Resume/CV File"); !!}
-            {!! Form::file('resume', ['hidden' => 'hidden', 'id' => 'resumeInput']); !!}
-            <div class="square img-thumbnail" role="button" data-trigger="#resumeInput">
-                <div class="thumbnail-overlay img-thumbnail">
-                    <div class="row h-100 m-auto">
-                        <div class="col m-auto">
-                            <i class="thumbnail-icon fas fa-edit fa-2x m-auto text-light"></i>
+            <div class="col col-4 m-auto text-center " >
+                <div class="form-group">
+                    {!! Form::label('resume-label',"Resume/CV File"); !!}
+                    {!! Form::file('resume', ['hidden' => 'hidden', 'id' => 'resumeInput']); !!}
+                    <div class="square img-thumbnail" role="button" data-trigger="#resumeInput">
+                        <div class="thumbnail-overlay img-thumbnail">
+                            <div class="row h-100 m-auto">
+                                <div class="col m-auto">
+                                    <i class="thumbnail-icon fas fa-edit fa-2x m-auto text-light"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thumbnail img-thumbnail" style="background: url('{{$theme->resume() != null ? $theme->resume()->getUrl('thumb') : asset(getPlaceholder())}}') center center; background-size: cover">
                         </div>
                     </div>
-                </div>
-                <div class="thumbnail img-thumbnail" style="background: url('{{$theme->resume() != null ? $theme->resume()->getUrl('thumb') : asset(getPlaceholder())}}') center center; background-size: cover">
                 </div>
             </div>
         </div>
