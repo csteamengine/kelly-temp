@@ -13,7 +13,7 @@
     <tbody>
     @foreach($links as $link)
         <tr>
-            <td>{{$loop->index+1}}</td>
+            <td class="selectable">{{$loop->index+1}}</td>
             <td>{{$link->id}}</td>
             <td>
                 <label class="c-switch c-switch-success">
@@ -27,7 +27,7 @@
                     <span class="c-switch-slider"></span>
                 </label>
             </td>
-            <td>
+            <td class="selectable">
                 @if($link->image() != null)
                     <img src="{{$link->image()->getUrl($link->image()->mime_type == 'application/pdf' ? "thumb" : "")}}"
                          style="height: 50px;"
@@ -39,8 +39,8 @@
                          title="<img src='{{$link->image()->getUrl($link->image()->mime_type == 'application/pdf' ? "thumb" : "")}}' width='100%' />">
                 @endif
             </td>
-            <td>{{$link->title}}</td>
-            <td>{{$link->url}}</td>
+            <td class="selectable">{{$link->title}}</td>
+            <td class="selectable">{{$link->url}}</td>
             <td>
                 @include('backend.links.includes.actions', $model = $link)
             </td>

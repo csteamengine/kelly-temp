@@ -1,10 +1,12 @@
 $(document).ready(function() {
     var table = $('#mediaTable').DataTable( {
+        responsive: true,
         rowReorder: {
             selector: 'td:first-child'
         },
         columnDefs: [
-            { targets: 1, visible: false }
+            { targets: 1, visible: false },
+            { responsivePriority: 0, targets: -1 }
         ]
     } );
 

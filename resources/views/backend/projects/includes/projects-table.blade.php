@@ -14,7 +14,7 @@
     <tbody>
     @foreach($projects as $project)
         <tr>
-            <td>{{$loop->index+1}}</td>
+            <td class="selectable">{{$loop->index+1}}</td>
             <td>{{$project->id}}</td>
             <td>
                 <label class="c-switch c-switch-success">
@@ -28,8 +28,8 @@
                     <span class="c-switch-slider"></span>
                 </label>
             </td>
-            <td>{{$project->title}}</td>
-            <td>{{$project->started_at}} - {{$project->finished_at}}</td>
+            <td class="selectable">{{$project->title}}</td>
+            <td class="selectable">{{$project->started_at}} - {{$project->finished_at}}</td>
             <td>
                 @include('backend.projects.includes.actions', $model = $project)
             </td>

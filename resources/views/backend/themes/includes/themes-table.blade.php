@@ -13,7 +13,7 @@
     <tbody>
     @foreach($themes as $theme)
         <tr>
-            <td>{{$loop->index+1}}</td>
+            <td class="selectable">{{$loop->index+1}}</td>
             <td>{{$theme->id}}</td>
             <td>
                 {!! Form::model($theme, ['route' => ['admin.themes.activate', $theme], 'method' => 'POST', 'files' => false, 'class' => 'form-horizontal']) !!}
@@ -28,7 +28,7 @@
                 </label>
                 {{Form::close()}}
             </td>
-            <td>{{$theme->title}}</td>
+            <td class="selectable">{{$theme->title}}</td>
             <td>
                 @include('backend.themes.includes.actions', $model = $theme)
             </td>

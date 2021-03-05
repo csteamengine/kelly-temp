@@ -5,6 +5,7 @@ window.Swal = require('sweetalert2');
 
 // require('datatables.net-bs4');
 require('datatables.net-rowreorder-bs4');
+require('datatables.net-responsive-bs4');
 
 // CoreUI
 require('@coreui/coreui');

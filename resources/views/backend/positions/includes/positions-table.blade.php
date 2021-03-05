@@ -15,7 +15,7 @@
     <tbody>
     @foreach($positions as $position)
         <tr>
-            <td>{{$loop->index+1}}</td>
+            <td class="selectable">{{$loop->index+1}}</td>
             <td>{{$position->id}}</td>
             <td>
                 <label class="c-switch c-switch-success">
@@ -29,9 +29,9 @@
                     <span class="c-switch-slider"></span>
                 </label>
             </td>
-            <td>{{$position->company}}</td>
-            <td>{{$position->title}}</td>
-            <td>{{$position->start_date}} - {{$position->end_date}}</td>
+            <td class="selectable">{{$position->company}}</td>
+            <td class="selectable">{{$position->title}}</td>
+            <td class="selectable">{{$position->start_date}} - {{$position->end_date}}</td>
             <td>
                 @include('backend.positions.includes.actions', $model = $position)
             </td>

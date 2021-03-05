@@ -48,6 +48,7 @@ mix.setPublicPath('public')
         'bs4-summernote',
         'datatables.net-bs4',
         'datatables.net-rowreorder-bs4',
+        'datatables.net-responsive-bs4',
         'lodash',
         'clipboard',
     ])
