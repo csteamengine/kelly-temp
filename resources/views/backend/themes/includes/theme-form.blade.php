@@ -19,7 +19,26 @@
         @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->background_video_active, 'input_name' => 'background_video_active', 'label_name' => 'Background Video Active'])
     </div>
 </div>
-
+<div class="row mb-2">
+    <div class="col col-2">
+        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->contact_active, 'input_name' => 'contact_active', 'label_name' => 'Contact Page'])
+    </div>
+    <div class="col col-2">
+        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->about_active, 'input_name' => 'about_active', 'label_name' => 'About Page'])
+    </div>
+    <div class="col col-2">
+        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->projects_active, 'input_name' => 'projects_active', 'label_name' => 'Projects Page'])
+    </div>
+    <div class="col col-2">
+        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->positions_active, 'input_name' => 'positions_active', 'label_name' => 'Positions Page'])
+    </div>
+    <div class="col col-2">
+        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->blogs_active, 'input_name' => 'blogs_active', 'label_name' => 'Blogs Page'])
+    </div>
+    <div class="col col-2">
+        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->links_active, 'input_name' => 'links_active', 'label_name' => 'Links Page'])
+    </div>
+</div>
 <div class="row mb-2">
     <div class="col col-12 col-sm-2">
         @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->is_active, 'input_name' => 'is_active', 'label_name' => 'Active'])
