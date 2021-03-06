@@ -11,7 +11,7 @@
 @if($project->getMedia('images')->first() != null)
     <div class="project-tile col-6 col-md-4 text-center">
         <div class="content project-tile-content">
-            <div class="project-bg" style="background-color: {{'#'.$project->getMedia('images')->first()->getCustomProperty('color')}}" data-image="{{$project->getMedia('images')->first()->getUrl()}}"></div>
+            <div class="project-bg" style="background-color: {{'#'.$project->getMedia('images')->first()->getCustomProperty('color')}}" data-image="{{$project->getMedia('images')->first()->getUrl($project->getMedia('images')->first()->mime_type == 'application/pdf' ? "thumb" : "")}}"></div>
             {{--        @if($project->is_pdf)--}}
             {{--            <a href="{{$project->images[0]->image_url}}" target="_blank">--}}
             {{--                <div class="project-tile-overlay">--}}

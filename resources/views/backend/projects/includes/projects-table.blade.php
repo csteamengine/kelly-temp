@@ -17,16 +17,7 @@
             <td class="selectable">{{$loop->index+1}}</td>
             <td>{{$project->id}}</td>
             <td>
-                <label class="c-switch c-switch-success">
-                    {!! Form::checkbox('is_active', true, $project->is_active, [
-                        'data-id'=>$project->id,
-                        'class' => 'status-input c-switch-input',
-                        'data-toggle'=>'toggle',
-                        'data-onstyle' => 'success',
-                        'data-route' => route('admin.projects.activate', $project)
-                        ]) !!}
-                    <span class="c-switch-slider"></span>
-                </label>
+                @include('backend.includes.switch', ['model' => $project, 'input_name' => 'is_active', 'default' => $project->is_active, 'route' => route('admin.projects.activate', $project)])
             </td>
             <td class="selectable">{{$project->title}}</td>
             <td class="selectable">{{$project->started_at}} - {{$project->finished_at}}</td>

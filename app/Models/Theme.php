@@ -41,8 +41,14 @@ class Theme extends Model implements HasMedia
         'youtube_url',
         'tiktok_url',
         'is_maintenance_mode',
-        'contact_active',
+        'contact_submit_active',
         'resume_active',
+        'contact_active',
+        'about_active',
+        'blogs_active',
+        'projects_active',
+        'positions_active',
+        'links_active',
         'background_video_active',
         'primary_color',
         'secondary_color',
@@ -111,9 +117,13 @@ class Theme extends Model implements HasMedia
      */
     public function registerMediaConversions(Media $media = null): void
     {
-        $this->addMediaConversion('thumb')
-            ->width(368)
-            ->height(232)
-            ->sharpen(10);
+        if ($media->getTypeFromMime() == 'pdf') {
+            $this->addMediaConversion('thumb');
+        } else {
+            $this->addMediaConversion('thumb')
+                ->width(368)
+                ->height(232)
+                ->sharpen(10);
+        }
     }
 }

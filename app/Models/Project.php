@@ -38,9 +38,13 @@ class Project extends Model implements HasMedia
      */
     public function registerMediaConversions(Media $media = null): void
     {
-        $this->addMediaConversion('thumb')
-            ->width(368)
-            ->height(232)
-            ->sharpen(10);
+        if ($media->getTypeFromMime() == 'pdf') {
+            $this->addMediaConversion('thumb');
+        } else {
+            $this->addMediaConversion('thumb')
+                ->width(368)
+                ->height(232)
+                ->sharpen(10);
+        }
     }
 }

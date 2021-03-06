@@ -31,8 +31,14 @@ class CreateThemesTable extends Migration
             $table->integer('order')->default(0);
             $table->boolean('is_active')->default(true);
             $table->boolean('is_maintenance_mode')->default(false);
-            $table->boolean('contact_active')->default(true);
+            $table->boolean('contact_submit_active')->default(true);
             $table->boolean('resume_active')->default(true);
+            $table->boolean('contact_active')->default(true);
+            $table->boolean('about_active')->default(true);
+            $table->boolean('blogs_active')->default(true);
+            $table->boolean('projects_active')->default(true);
+            $table->boolean('positions_active')->default(true);
+            $table->boolean('links_active')->default(true);
             $table->boolean('background_video_active')->default(false);
             $table->string('primary_color')->default('#FFFFFF');
             $table->string('secondary_color')->default('#000000');

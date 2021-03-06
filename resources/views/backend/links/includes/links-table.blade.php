@@ -16,16 +16,7 @@
             <td class="selectable">{{$loop->index+1}}</td>
             <td>{{$link->id}}</td>
             <td>
-                <label class="c-switch c-switch-success">
-                    {!! Form::checkbox('is_active', true, $link->is_active, [
-                        'data-id'=>$link->id,
-                        'class' => 'status-input c-switch-input',
-                        'data-toggle'=>'toggle',
-                        'data-onstyle' => 'success',
-                        'data-route' => route('admin.links.activate', $link)
-                        ]) !!}
-                    <span class="c-switch-slider"></span>
-                </label>
+                @include('backend.includes.switch', ['model' => $link, 'input_name' => 'is_active', 'default' => $link->is_active, 'route' => route('admin.links.activate', $link)])
             </td>
             <td class="selectable">
                 @if($link->image() != null)

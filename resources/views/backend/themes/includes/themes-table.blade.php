@@ -17,15 +17,7 @@
             <td>{{$theme->id}}</td>
             <td>
                 {!! Form::model($theme, ['route' => ['admin.themes.activate', $theme], 'method' => 'POST', 'files' => false, 'class' => 'form-horizontal']) !!}
-                <label class="c-switch c-switch-success">
-                    {!! Form::checkbox('is_active', true, $theme->is_active, [
-                        'data-id'=>$theme->id,
-                        'class' => 'status-input c-switch-input',
-                        'data-toggle'=>'toggle',
-                        'data-onstyle' => 'success',
-                        ]) !!}
-                    <span class="c-switch-slider"></span>
-                </label>
+                @include('backend.includes.switch', ['model' => $theme, 'input_name' => 'is_active', 'default' => $theme->is_active, 'route' => route('admin.themes.activate', $theme)])
                 {{Form::close()}}
             </td>
             <td class="selectable">{{$theme->title}}</td>

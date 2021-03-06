@@ -18,7 +18,7 @@
             <td>{{$loop->index+1}}</td>
             <td>{{$media->id}}</td>
             <td>
-                <img src="{{$media->getUrl($media->mime_type == 'application/pdf' ? "thumb" : "")}}"
+                <img src="{{$media->getUrl('thumb')}}"
                      style="width: 50px;"
                      alt="Image"
                      class="media-image"
