@@ -34,7 +34,7 @@ class BlogController extends Controller
     public function index()
     {
         //List all the blogs
-        $blogs = Blog::all();
+        $blogs = Blog::orderBy('order', 'asc')->get();
 
         return view('frontend.blogs.index')->withBlogs($blogs);
     }
