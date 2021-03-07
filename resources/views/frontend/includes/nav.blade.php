@@ -29,6 +29,7 @@
                             :text="__('Home')"
                             class="nav-link font-lg" />
                     </li>
+                    @if($active_theme->projects_active)
                     <li class="nav-item">
                         <x-utils.link
                             :href="route('frontend.projects')"
@@ -36,6 +37,7 @@
                             :text="__('Works')"
                             class="nav-link" />
                     </li>
+                    @endif
                     @if(isset($active_theme) && $active_theme->resume_active && $active_theme->resume() != null)
                         <li class="nav-item">
                             <x-utils.link
@@ -45,6 +47,7 @@
                                 target="_blank" />
                         </li>
                     @endif
+{{--                    @if($active_theme->blogs_active)--}}
 {{--                    <li class="nav-item">--}}
 {{--                        <x-utils.link--}}
 {{--                            :href="route('frontend.blogs')"--}}
@@ -52,6 +55,8 @@
 {{--                            :text="__('Blogs')"--}}
 {{--                            class="nav-link" />--}}
 {{--                    </li>--}}
+{{--                    @endif--}}
+                    @if($active_theme->about_active)
                     <li class="nav-item">
                         <x-utils.link
                             :href="route('frontend.about')"
@@ -59,6 +64,8 @@
                             :text="__('About')"
                             class="nav-link" />
                     </li>
+                    @endif
+{{--                    @if($active_theme->career_active)--}}
 {{--                    <li class="nav-item">--}}
 {{--                        <x-utils.link--}}
 {{--                            :href="route('frontend.career')"--}}
@@ -66,6 +73,8 @@
 {{--                            :text="__('Career')"--}}
 {{--                            class="nav-link" />--}}
 {{--                    </li>--}}
+{{--                    @endif--}}
+                    @if($active_theme->projects_active)
                     <li class="nav-item">
                         <x-utils.link
                             :href="route('frontend.contact')"
@@ -73,7 +82,7 @@
                             :text="__('Contact')"
                             class="nav-link" />
                     </li>
-
+                    @endif
 {{--                @guest--}}
 {{--                    <li class="nav-item">--}}
 {{--                        <x-utils.link--}}

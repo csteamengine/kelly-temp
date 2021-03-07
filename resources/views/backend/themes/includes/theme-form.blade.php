@@ -4,41 +4,55 @@
 
 {!! Form::model($theme, ['route' => [$route, $theme], 'method' => $method, 'files' => true]) !!}
 {!! Form::token(); !!}
+<div class="accordion" id="pagePermissions">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Change Page Permissions
+                </button>
+            </h2>
+        </div>
 
-<div class="row mb-2">
-    <div class="col col-3">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->is_maintenance_mode, 'input_name' => 'is_maintenance_mode', 'label_name' => 'Maintenance Mode'])
-    </div>
-    <div class="col col-3">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->contact_submit_active, 'input_name' => 'contact_submit_active', 'label_name' => 'Contact Submissions'])
-    </div>
-    <div class="col col-3">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->resume_active, 'input_name' => 'resume_active', 'label_name' => 'Resume Download'])
-    </div>
-    <div class="col col-3">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->background_video_active, 'input_name' => 'background_video_active', 'label_name' => 'Background Video Active'])
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#pagePermissions">
+            <div class="card-body">
+                <div class="row mb-2">
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->is_maintenance_mode, 'input_name' => 'is_maintenance_mode', 'label_name' => 'Maintenance Mode'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->contact_submit_active, 'input_name' => 'contact_submit_active', 'label_name' => 'Contact Submissions'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->resume_active, 'input_name' => 'resume_active', 'label_name' => 'Resume Download'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->background_video_active, 'input_name' => 'background_video_active', 'label_name' => 'Background Video'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->contact_active, 'input_name' => 'contact_active', 'label_name' => 'Contact Page'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->about_active, 'input_name' => 'about_active', 'label_name' => 'About Page'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->projects_active, 'input_name' => 'projects_active', 'label_name' => 'Projects Page'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->positions_active, 'input_name' => 'positions_active', 'label_name' => 'Positions Page'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->blogs_active, 'input_name' => 'blogs_active', 'label_name' => 'Blogs Page'])
+                    </div>
+                    <div class="col col-6 col-sm-3">
+                        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->links_active, 'input_name' => 'links_active', 'label_name' => 'Links Page'])
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row mb-2">
-    <div class="col col-2">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->contact_active, 'input_name' => 'contact_active', 'label_name' => 'Contact Page'])
-    </div>
-    <div class="col col-2">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->about_active, 'input_name' => 'about_active', 'label_name' => 'About Page'])
-    </div>
-    <div class="col col-2">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->projects_active, 'input_name' => 'projects_active', 'label_name' => 'Projects Page'])
-    </div>
-    <div class="col col-2">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->positions_active, 'input_name' => 'positions_active', 'label_name' => 'Positions Page'])
-    </div>
-    <div class="col col-2">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->blogs_active, 'input_name' => 'blogs_active', 'label_name' => 'Blogs Page'])
-    </div>
-    <div class="col col-2">
-        @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->links_active, 'input_name' => 'links_active', 'label_name' => 'Links Page'])
-    </div>
-</div>
+
 <div class="row mb-2">
     <div class="col col-12 col-sm-2">
         @include('backend.includes.switch-label', ['model'=> $theme, 'default' => $theme->is_active, 'input_name' => 'is_active', 'label_name' => 'Active'])
