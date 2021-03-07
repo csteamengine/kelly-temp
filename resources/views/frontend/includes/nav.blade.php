@@ -47,15 +47,15 @@
                                 target="_blank" />
                         </li>
                     @endif
-{{--                    @if($active_theme->blogs_active)--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <x-utils.link--}}
-{{--                            :href="route('frontend.blogs')"--}}
-{{--                            :active="activeClass(Active::checkRoute(['frontend.blogs', 'frontend.blogs.show']))"--}}
-{{--                            :text="__('Blogs')"--}}
-{{--                            class="nav-link" />--}}
-{{--                    </li>--}}
-{{--                    @endif--}}
+                    @if($active_theme->blogs_active)
+                    <li class="nav-item">
+                        <x-utils.link
+                            :href="route('frontend.blogs')"
+                            :active="activeClass(Active::checkRoute(['frontend.blogs', 'frontend.blogs.show']))"
+                            :text="__('Blogs')"
+                            class="nav-link" />
+                    </li>
+                    @endif
                     @if($active_theme->about_active)
                     <li class="nav-item">
                         <x-utils.link
@@ -65,15 +65,15 @@
                             class="nav-link" />
                     </li>
                     @endif
-{{--                    @if($active_theme->career_active)--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <x-utils.link--}}
-{{--                            :href="route('frontend.career')"--}}
-{{--                            :active="activeClass(Active::checkRoute('frontend.career'))"--}}
-{{--                            :text="__('Career')"--}}
-{{--                            class="nav-link" />--}}
-{{--                    </li>--}}
-{{--                    @endif--}}
+                    @if($active_theme->positions_active)
+                    <li class="nav-item">
+                        <x-utils.link
+                            :href="route('frontend.career')"
+                            :active="activeClass(Active::checkRoute('frontend.career'))"
+                            :text="__('Career')"
+                            class="nav-link" />
+                    </li>
+                    @endif
                     @if($active_theme->projects_active)
                     <li class="nav-item">
                         <x-utils.link

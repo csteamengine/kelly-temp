@@ -21,6 +21,7 @@ class LinkController extends Controller
             ->where('end_date', '>=', date('Y-m-d H:i'))
             ->orWhereNull('start_date')
             ->orWhereNull('end_date')
+            ->where('is_active', true)
             ->orderBy('order', 'asc')->get();
         //Shows all projects (or at least a range and searchable)
         return view('frontend.links.index')->withLinks($links);

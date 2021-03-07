@@ -34,7 +34,7 @@ class PositionController extends Controller
     public function index()
     {
         //List all the positions
-        $positions = Position::all();
+        $positions = Position::where('is_active', true)->get();
 
         return view('frontend.positions.index')->withPositions($positions);
     }
