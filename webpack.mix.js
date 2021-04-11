@@ -45,6 +45,7 @@ mix.setPublicPath('public')
         'popper.js',
         'axios',
         'sweetalert2',
+        'codemirror',
         'bs4-summernote',
         'datatables.net-bs4',
         'datatables.net-rowreorder-bs4',

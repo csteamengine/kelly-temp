@@ -32,7 +32,7 @@ class UpdateThemeRequest extends FormRequest
             'title' => 'required|string',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
-            'description' => 'sometimes|string',
+            'description' => 'nullable|string',
             'page_content' => 'nullable|string',
             'github_url' => 'nullable|url',
             'facebook_url' => 'nullable|url',
