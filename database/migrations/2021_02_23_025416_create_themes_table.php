@@ -39,6 +39,7 @@ class CreateThemesTable extends Migration
             $table->boolean('projects_active')->default(true);
             $table->boolean('positions_active')->default(true);
             $table->boolean('links_active')->default(true);
+            $table->boolean('background_image_active')->default(false);
             $table->boolean('background_video_active')->default(false);
             $table->string('primary_color')->default('#FFFFFF');
             $table->string('secondary_color')->default('#000000');

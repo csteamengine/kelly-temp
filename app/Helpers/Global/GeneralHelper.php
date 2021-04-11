@@ -3,7 +3,6 @@
 use App\Models\Theme;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use PHPColorExtractor\PHPColorExtractor;
@@ -209,7 +208,7 @@ if (! function_exists('addFileToModel')) {
     function addFileToModel($image, HasMedia $model, $collection)
     {
         if ($image != null) {
-            if ($image->getMimeType() == "application/pdf") {
+            if ($image->getMimeType() == "application/pdf" || $image->getMimeType() == "video/mp4") {
                 $model->addMedia($image)
                     ->withCustomProperties(['color' => '808080'])
                     ->toMediaCollection($collection);
@@ -241,13 +240,13 @@ if (! function_exists('displayThumbnail')) {
     }
 }
 
-if (! function_exists('getPlaceholder')){
+if (! function_exists('getPlaceholder')) {
 
     /**
      * Gets the default placeholder in /storage/app/public/img
      */
-    function getPlaceholder(){
+    function getPlaceholder()
+    {
         return "storage/img/placeholder.png";
     }
 }
-

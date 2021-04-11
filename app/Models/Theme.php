@@ -21,6 +21,7 @@ class Theme extends Model implements HasMedia
         'is_maintenance_mode' => 'boolean',
         'contact_active' => 'boolean',
         'resume_active' => 'boolean',
+        'background_image_active' => 'boolean',
         'background_video_active' => 'boolean',
     ];
 
@@ -49,6 +50,7 @@ class Theme extends Model implements HasMedia
         'projects_active',
         'positions_active',
         'links_active',
+        'background_image_active',
         'background_video_active',
         'primary_color',
         'secondary_color',
@@ -117,13 +119,15 @@ class Theme extends Model implements HasMedia
      */
     public function registerMediaConversions(Media $media = null): void
     {
-        if ($media->getTypeFromMime() == 'pdf') {
-            $this->addMediaConversion('thumb');
-        } else {
-            $this->addMediaConversion('thumb')
-                ->width(368)
-                ->height(232)
-                ->sharpen(10);
+        if ($media->getTypeFromMime() != 'video') {
+            if ($media->getTypeFromMime() == 'pdf') {
+                $this->addMediaConversion('thumb');
+            } else {
+                $this->addMediaConversion('thumb')
+                    ->width(368)
+                    ->height(232)
+                    ->sharpen(10);
+            }
         }
     }
 }
