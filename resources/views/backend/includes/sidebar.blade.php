@@ -21,7 +21,7 @@
             <x-utils.link
                 class="c-sidebar-nav-link"
                 :href="route('admin.projects.index')"
-                :active="activeClass(Route::is('admin.projects.index'), 'c-active')"
+                :active="activeClass(Route::is(['admin.projects.index', 'admin.projects.edit', 'admin.projects.create']), 'c-active')"
                 icon="c-sidebar-nav-icon cil-briefcase"
                 :text="__('Projects')" />
         </li>
@@ -29,7 +29,7 @@
             <x-utils.link
                 class="c-sidebar-nav-link"
                 :href="route('admin.blogs.index')"
-                :active="activeClass(Route::is('admin.blogs.index'), 'c-active')"
+                :active="activeClass(Route::is(['admin.blogs.index', 'admin.blogs.edit', 'admin.blogs.create']), 'c-active')"
                 icon="c-sidebar-nav-icon cil-newspaper"
                 :text="__('Blogs')" />
         </li>
@@ -37,7 +37,7 @@
             <x-utils.link
                 class="c-sidebar-nav-link"
                 :href="route('admin.positions.index')"
-                :active="activeClass(Route::is('admin.positions.index'), 'c-active')"
+                :active="activeClass(Route::is(['admin.positions.index', 'admin.positions.edit', 'admin.positions.create']), 'c-active')"
                 icon="c-sidebar-nav-icon cil-user"
                 :text="__('Positions')" />
         </li>
@@ -45,7 +45,7 @@
             <x-utils.link
                 class="c-sidebar-nav-link"
                 :href="route('admin.links.index')"
-                :active="activeClass(Route::is('admin.links.index'), 'c-active')"
+                :active="activeClass(Route::is(['admin.links.index', 'admin.links.edit', 'admin.links.create']), 'c-active')"
                 icon="c-sidebar-nav-icon cil-external-link"
                 :text="__('Links')" />
         </li>
@@ -53,7 +53,7 @@
             <x-utils.link
                 class="c-sidebar-nav-link"
                 :href="route('admin.themes.index')"
-                :active="activeClass(Route::is('admin.themes.index'), 'c-active')"
+                :active="activeClass(Route::is(['admin.themes.index', 'admin.themes.edit', 'admin.themes.create']), 'c-active')"
                 icon="c-sidebar-nav-icon cil-paint-bucket"
                 :text="__('Themes')" />
         </li>
