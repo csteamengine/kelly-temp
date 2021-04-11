@@ -14,6 +14,7 @@
               href="{{$active_theme->favicon()->getUrl()}}">
     @endif
 
+    @include('frontend.includes.color_styles')
 
     @if(config('analytics.enabled') && config('analytics.measurement_id') !== null)
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-C33CV6KX0M"></script>

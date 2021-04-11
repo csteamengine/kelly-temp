@@ -14,6 +14,8 @@
                   href="{{$active_theme->favicon()->getUrl()}}">
         @endif
 
+        @include('frontend.includes.color_styles')
+
         @stack('before-styles')
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="{{ mix('css/frontend.css') }}" rel="stylesheet">
