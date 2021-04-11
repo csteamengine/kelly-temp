@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.positions.management') . ' | ' . __('labels.backend.positions.create'))
+@section('title', __("Create Position"))
 
 @push('before-styles')
 @endpush

@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.blogs.management') . ' | ' . __('labels.backend.blogs.create'))
+@section('title', __("Create Blog"))
 
 @push('before-styles')
 @endpush

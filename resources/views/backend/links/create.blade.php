@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', "Create Link")
+@section('title', __("Create Link"))
 
 @push('before-styles')
 @endpush

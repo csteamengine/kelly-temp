@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.themes.management') . ' | ' . __('labels.backend.themes.create'))
+@section('title', __("Edit Theme"))
 
 {{--@push('before-styles')--}}
 {{--@endpush--}}

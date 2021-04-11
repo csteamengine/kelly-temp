@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', "Edit Link")
+@section('title', __("Edit Link"))
 
 @push('before-scripts')
 @endpush

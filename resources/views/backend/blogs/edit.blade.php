@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.blogs.management') . ' | ' . __('labels.backend.blogs.create'))
+@section('title', __("Edit Blog"))
 
 @push('before-scripts')
     {{--    <script src="/js/vendor.js"></script>--}}

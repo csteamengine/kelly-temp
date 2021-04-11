@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('labels.backend.projects.management') . ' | ' . __('labels.backend.projects.create'))
+@section('title', __("Edit Project"))
 
 @push('before-scripts')
     {{--    <script src="/js/vendor.js"></script>--}}
