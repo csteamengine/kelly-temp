@@ -14,7 +14,7 @@ $(document).ready(function(){
         }).on('load', function() {
             var height = $(this).prop('naturalHeight');
             var width = $(this).prop('naturalWidth');
-            console.log($(this).prop('naturalHeight'));
+
             imageElement.css('background', 'url("'+image+'") center center');
             if(width > height){
                 imageElement.css('background-size', '100%');

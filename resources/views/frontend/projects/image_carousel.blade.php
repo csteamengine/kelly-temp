@@ -11,8 +11,13 @@
         <div id="projectImageCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
                 @foreach($images as $image)
-                    <div class="carousel-item @if($loop->first) active @endif h-100 m-auto" style="background-color: {{'#'.$image->getCustomProperty('color')}}; background-size: 100% !important" data-image="{{$image->getUrl()}}">
-                    </div>
+                    @if($image->getTypeFromMime() != 'pdf')
+                        <div class="carousel-item @if($loop->first) active @endif h-100 m-auto" style="background-color: {{'#'.$image->getCustomProperty('color')}}; background-size: 100% !important" data-image="{{$image->getUrl()}}">
+                        </div>
+                    @else
+                        <div class="carousel-item @if($loop->first) active @endif h-100 m-auto" style="background-color: {{'#'.$image->getCustomProperty('color')}}; background-size: 100% !important" data-image="{{$image->getUrl()}}" hidden>
+                        </div>
+                    @endif
                 @endforeach
             </div>
             <a class="carousel-control-prev" href="#projectImageCarousel" role="button" data-slide="prev">

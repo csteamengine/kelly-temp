@@ -52,4 +52,20 @@ class Project extends Model implements HasMedia
                 ->height(600);
         }
     }
+
+    /**
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->getMedia('images')->first()->getTypeFromMime() == 'pdf' ? $this->getMedia('images')->first()->getUrl() : route('frontend.projects.show', $this);
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPdf(): bool
+    {
+        return $this->getMedia('images')->first()->getTypeFromMime() == 'pdf';
+    }
 }
