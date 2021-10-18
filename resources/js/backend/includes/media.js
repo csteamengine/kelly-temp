@@ -38,6 +38,9 @@ $(document).ready(function() {
 
             var route = $('#orderRoute').val();
             var csrf_token = $('#csrfValue').val();
+
+            console.log(json);
+
             $.fn.ajaxCall(json, route, csrf_token, 'PATCH');
         });
 

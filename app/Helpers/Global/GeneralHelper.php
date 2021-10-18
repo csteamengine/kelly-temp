@@ -96,13 +96,13 @@ if (! function_exists('reorderObjects')) {
             $link->order = $index;
             if (! $link->save()) {
                 return response()->json([
-                    'message' => 'Failed to update the link order!',
+                    'message' => 'Failed to update the order!',
                 ], 400);
             }
         }
 
         return response()->json([
-            'message' => "Successfully updated the link order!",
+            'message' => "Successfully updated the order!",
         ], 200);
     }
 }
@@ -140,15 +140,15 @@ if (! function_exists('reorderMedia')) {
     function reorderMedia(Request $request)
     {
         $validatedJSON = $request->validate([
-            'media' => 'required|JSON',
+            'objects' => 'required|JSON',
         ]);
 
-        $data = json_decode($validatedJSON['media']);
+        $data = json_decode($validatedJSON['objects']);
 
         Media::setNewOrder($data);
 
         return response()->json([
-            'message' => __("Successfully updated the theme order!"),
+            'message' => __("Successfully updated the media order!"),
         ], 200);
     }
 }

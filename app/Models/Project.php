@@ -40,11 +40,16 @@ class Project extends Model implements HasMedia
     {
         if ($media->getTypeFromMime() == 'pdf') {
             $this->addMediaConversion('thumb');
+            $this->addMediaConversion('preview');
         } else {
             $this->addMediaConversion('thumb')
                 ->width(368)
                 ->height(232)
                 ->sharpen(10);
+
+            $this->addMediaConversion('preview')
+                ->width(600)
+                ->height(600);
         }
     }
 }
