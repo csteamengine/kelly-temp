@@ -32,6 +32,7 @@ class UpdateProjectRequest extends FormRequest
         //TODO update Rules
         return [
             'title' => 'required|string',
+            'medium' => 'nullable|string',
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
             'page_content' => 'nullable|string',

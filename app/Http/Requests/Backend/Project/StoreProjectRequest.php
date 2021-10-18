@@ -31,6 +31,7 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
+            'medium' => 'nullable|string',
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
             'page_content' => 'nullable|string',

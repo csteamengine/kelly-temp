@@ -40,6 +40,7 @@ class ProjectService extends BaseService
         try {
             $project = $this->model::create([
                 'title' => $data['title'],
+                'medium' => $data['medium'],
                 'short_description' => $data['short_description'],
                 'description' => $data['description'],
                 'page_content' => $data['page_content'],
@@ -76,6 +77,7 @@ class ProjectService extends BaseService
         try {
             $project->update([
                 'title' => $data['title'],
+                'medium' => $data['medium'],
                 'short_description' => $data['short_description'],
                 'description' => $data['description'],
                 'page_content' => $data['page_content'],

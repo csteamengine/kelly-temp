@@ -37,6 +37,16 @@
     <div class="row mb-2">
         <div class="col">
             <div class="form-group">
+                {!! Form::label('medium', 'Medium'); !!}
+                {!! Form::text('medium', null, ['class' => 'form-control', 'placeholder' => 'Medium']); !!}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mb-2">
+        <div class="col">
+            <div class="form-group">
                 {!! Form::label('short_description', 'Short Description'); !!}
                 {!! Form::text('short_description', null, ['class' => 'form-control', 'placeholder' => 'Short Description']); !!}
             </div>

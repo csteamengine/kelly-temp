@@ -27,6 +27,7 @@ class ProjectFactory extends Factory
 
         return [
             'title' => $this->faker->catchPhrase,
+            'medium' => $this->faker->text(100),
             'short_description' => $this->faker->text(100),
             'description' => $this->faker->text,
             'page_content' => $this->faker->randomHtml(),
