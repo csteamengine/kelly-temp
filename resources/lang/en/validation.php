@@ -147,6 +147,16 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'frontend' => [
+            'mail' => [
+                'name' => 'Name',
+                'email' => 'Email',
+                'phone' => 'Phone',
+                'message' => 'Message',
+                'body_title' => 'New Contact Submission',
+            ]
+        ],
+    ],
 
 ];
