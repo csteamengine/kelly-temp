@@ -39,7 +39,7 @@ class SendContact extends Mailable
         return $this->to(getActiveTheme()->email, config('mail.from.name'))
             ->view('frontend.mail.contact')
             ->text('frontend.mail.contact-text')
-            ->subject(__('strings.emails.contact.subject', ['app_name' => appName(), 'from_name' => $this->request->first_name . ' ' . $this->request->last_name]))
+            ->subject(__('validation.attributes.frontend.mail.subject', ['app_name' => appName(), 'from_name' => $this->request->first_name . ' ' . $this->request->last_name]))
             ->from(config('mail.from.address'), $this->request->first_name . ' ' . $this->request->last_name)
             ->replyTo($this->request->email, $this->request->first_name . ' ' . $this->request->last_name);
     }
