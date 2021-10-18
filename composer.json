@@ -38,7 +38,7 @@
         "roave/security-advisories": "dev-master",
         "barryvdh/laravel-debugbar": "^3.2",
         "barryvdh/laravel-ide-helper": "^2.6",
-        "codedungeon/phpunit-result-printer": "^0.29",
+        "codedungeon/phpunit-result-printer": "^0.31",
         "facade/ignition": "^2.5",
         "friendsofphp/php-cs-fixer": "^2.16",
         "fakerphp/faker": "^1.9.1",
