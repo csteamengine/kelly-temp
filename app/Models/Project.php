@@ -39,7 +39,7 @@ class Project extends Model implements HasMedia
      */
     public function registerMediaConversions(Media $media = null): void
     {
-        ini_set('memory_limit','315M');
+        ini_set('memory_limit', '315M');
         if ($media->getTypeFromMime() == 'pdf') {
             $this->addMediaConversion('thumb');
             $this->addMediaConversion('preview');
