@@ -42,6 +42,7 @@ class CreateProjectTest extends TestCase
 
         $response = $this->post('/admin/projects', [
             'title' => "Fake Title",
+            'medium' => 'Fake Medium',
             'short_description' => 'Fake Short Description',
             'description' => 'Fake Description',
             'page_content' => '<h1>Fake Page Content</h1>',
@@ -55,6 +56,7 @@ class CreateProjectTest extends TestCase
             'projects',
             [
                 'title' => "Fake Title",
+                'medium' => 'Fake Medium',
                 'short_description' => 'Fake Short Description',
                 'description' => 'Fake Description',
                 'page_content' => '<h1>Fake Page Content</h1>',

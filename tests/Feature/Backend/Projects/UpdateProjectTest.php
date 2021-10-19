@@ -50,6 +50,7 @@ class UpdateProjectTest extends TestCase
 
         $response = $this->patch(route('admin.projects.update', $project), [
             'title' => "Fake Title Update",
+            'medium' => 'Fake Medium Update',
             'short_description' => 'Fake Short Description Update',
             'description' => 'Fake Description Update',
             'page_content' => '<h1>Fake Page Content Update</h1>',
@@ -63,6 +64,7 @@ class UpdateProjectTest extends TestCase
             'projects',
             [
                 'title' => "Fake Title Update",
+                'medium' => 'Fake Medium Update',
                 'short_description' => 'Fake Short Description Update',
                 'description' => 'Fake Description Update',
                 'page_content' => '<h1>Fake Page Content Update</h1>',
