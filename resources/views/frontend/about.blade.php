@@ -17,7 +17,7 @@
     @if($active_theme->about_image() != null)
         <div class="row mb-3">
             <div class="col col-12 col-sm-6 m-auto text-center">
-                <img src="{{$active_theme->about_image()->getUrl()}}" class="img-fluid" alt="About Image">
+                <img src="{{$active_theme->about_image()->getUrl('preview')}}" class="img-fluid" alt="About Image">
             </div>
         </div>
     @endif
