@@ -22,13 +22,14 @@
         <link rel="stylesheet" href="{{mix('css/frontend/home/home.css')}}"/>
         @stack('after-styles')
     </head>
+
     @if(isset($active_theme) && $active_theme->background_image() != null)
         @if($active_theme->background_image()->getTypeFromMime() == 'video')
             <video autoplay muted loop id="myVideo" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;">
                 <source src="{{$active_theme->background_image()->getUrl()}}" type="video/mp4">
             </video>
         @else
-            <body data-image="{{$active_theme->background_image()->getUrl()}}" class="lazy-load">
+            <body data-image="{{$active_theme->background_image()->getUrl()}}" class="lazy-load" style="background-color: {{"#" . $active_theme->background_image()->getCustomProperty('color')}}">
         @endif
     @else
         <body>
