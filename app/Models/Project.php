@@ -49,8 +49,8 @@ class Project extends Model implements HasMedia
                 ->height(232);
 
             $this->addMediaConversion('preview')
-                ->width(600)
-                ->height(600);
+                ->width(1200)
+                ->height(1200);
         }
     }
 

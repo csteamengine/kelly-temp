@@ -12,7 +12,7 @@
             <div class="carousel-inner">
                 @foreach($images as $image)
                     @if($image->getTypeFromMime() != 'pdf')
-                        <div type="button" class="carousel-item @if($loop->first) active @endif h-100 m-auto" style="background-color: {{'#'.$image->getCustomProperty('color')}}; background-size: 100% !important" data-image="{{$image->getUrl('preview')}}" data-modal-image="{{$image->getUrl()}}" data-toggle="modal" data-target="#projectImagePreview">
+                        <div type="button" class="carousel-item @if($loop->first) active @endif h-100 m-auto" style="background-color: {{'#'.$image->getCustomProperty('color')}}; background-size: 100% !important" data-image="{{$image->getUrl('preview')}}" data-modal-image="{{$image->getUrl('preview')}}" data-toggle="modal" data-target="#projectImagePreview">
                         </div>
                     @else
                         <div class="carousel-item @if($loop->first) active @endif h-100 m-auto" style="background-color: {{'#'.$image->getCustomProperty('color')}}; background-size: 100% !important" data-image="{{$image->getUrl('preview')}}" hidden>
