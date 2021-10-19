@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.setPublicPath('public')
+    .disableNotifications()
     .setResourceRoot('../') // Turns assets paths in css relative to css file
     .vue()
     .sass('resources/sass/frontend/app.scss', 'css/frontend.css')
