@@ -58,37 +58,41 @@ function loadImage(image, imageElement, isLast = false){
 
 function loadLargeImages(){
     if(tilesLoaded && carouselLoaded){
-        console.log("HERE!");
         $('.carousel-item').each(function(){
             let imageElement = $(this);
             let image = $(this).data('modal-image');
 
-            loadImage(image, imageElement);
+            let imgSrc = $('<img />').attr({
+                'src': image,
+                'class': 'img-responsive largeImage'
+            }).on('load', function() {
+                $(this).hide();
+
+                imageElement.html($(this));
+            });
         });
     }
 }
 
 $('#projectImagePreview').on('show.bs.modal', function (event) {
-    let button = $(event.relatedTarget)
-    let image = button.data('modal-image');
+    let button = $(event.relatedTarget);
     let modal = $(this);
+    let imageOriginal = button.find('.largeImage');
+    let image = imageOriginal.clone();
     let element = modal.find('.modal-content');
 
-    let imgSrc = $('<img />').attr({
-        'src': image,
-        'class': 'img-responsive'
-    }).on('load', function() {
-        let height = $(this).prop('naturalHeight');
-        let width = $(this).prop('naturalWidth');
+    let height = imageOriginal.prop('naturalHeight');
+    let width = imageOriginal.prop('naturalWidth');
 
-        if(height > width){
-            $(this).css('height', '90vh');
-            $(this).css('width', 'auto');
-        }else{
-            $(this).css('height', 'auto');
-            $(this).css('width', '90vw');
-        }
+    if(height > width){
+        image.css('height', '90vh');
+        image.css('width', 'auto');
+    }else{
+        image.css('height', 'auto');
+        image.css('width', '90vw');
+    }
 
-        element.html($(this));
-    });
+    image.show();
+
+    element.html(image);
 })
