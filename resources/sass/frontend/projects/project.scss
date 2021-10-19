@@ -40,3 +40,14 @@
   -webkit-background-size: auto 100% !important;
   background-size: auto 100% !important;
 }
+
+#projectImagePreview{
+    .modal-dialog{
+        max-width: 100%;
+    }
+
+    .modal-content{
+        width: auto;
+        margin: auto;
+    }
+}
