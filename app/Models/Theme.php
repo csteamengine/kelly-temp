@@ -125,8 +125,10 @@ class Theme extends Model implements HasMedia
             } else {
                 $this->addMediaConversion('thumb')
                     ->width(368)
-                    ->height(232)
-                    ->sharpen(10);
+                    ->height(232);
+                $this->addMediaConversion('preview')
+                    ->width(600)
+                    ->height(600);
             }
         }
     }
