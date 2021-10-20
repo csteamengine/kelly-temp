@@ -57,7 +57,9 @@ function loadImage(image, imageElement, isLast = false){
 }
 
 function loadLargeImages(){
+    console.log("Here 1");
     if((tilesLoaded && carouselLoaded) || isMobile()){
+        console.log("Here 2");
         $('.carousel-item').each(function(){
             let imageElement = $(this);
             let image = $(this).data('modal-image');
