@@ -57,9 +57,7 @@ function loadImage(image, imageElement, isLast = false){
 }
 
 function loadLargeImages(){
-    console.log("Here 1");
     if((tilesLoaded && carouselLoaded) || isMobile()){
-        console.log("Here 2");
         $('.carousel-item').each(function(){
             let imageElement = $(this);
             let image = $(this).data('modal-image');
@@ -77,12 +75,10 @@ function loadLargeImages(){
 }
 
 $('#projectImagePreview').on('show.bs.modal', function (event) {
-    console.log("Here");
     let button = $(event.relatedTarget);
     let modal = $(this);
     let imageOriginal = button.find('.largeImage');
     let image = imageOriginal.clone();
-    console.log(image);
     let element = modal.find('.modal-content');
 
     let height = imageOriginal.prop('naturalHeight');
