@@ -155,8 +155,8 @@ return [
                 'phone' => 'Phone',
                 'message' => 'Message',
                 'body_title' => 'New Contact Submission',
-                'subject' => 'Kelly Devitt Ceramics | New Contact Submission',
-            ]
+                'subject' => ':app_name | :from_name',
+            ],
         ],
     ],
 
