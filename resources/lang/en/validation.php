@@ -155,7 +155,7 @@ return [
                 'phone' => 'Phone',
                 'message' => 'Message',
                 'body_title' => 'New Contact Submission',
-                'subject' => ':app_name | :from_name',
+                'subject' => ':app_name | From :from_name',
             ],
         ],
     ],
