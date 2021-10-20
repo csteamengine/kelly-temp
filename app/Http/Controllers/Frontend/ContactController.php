@@ -26,7 +26,7 @@ class ContactController extends Controller
     public function send(SendContactRequest $request)
     {
         //TODO fix this
-        if (config('CONTACT_CAPTCHA_STATUS')) {
+        if (config('boilerplate.access.captcha.contact')) {
             $request->validate([
                 'g-recaptcha-response' => ['required_if:captcha_status,true', new Captcha],
             ], [
