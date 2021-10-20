@@ -88,7 +88,10 @@ $('#projectImagePreview').on('show.bs.modal', function (event) {
     let height = imageOriginal.prop('naturalHeight');
     let width = imageOriginal.prop('naturalWidth');
 
-    if(height > width){
+    if(isMobile()){
+        image.css('height', 'auto');
+        image.css('width', '100%');
+    }else if(height > width){
         image.css('height', '90vh');
         image.css('width', 'auto');
     }else{
