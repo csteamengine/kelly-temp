@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Frontend\Contact;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\Captcha;
 
 /**
  * Class SendContactRequest.
@@ -31,7 +32,6 @@ class SendContactRequest extends FormRequest
             'last_name' => ['required'],
             'email' => ['required'],
             'message' => ['required'],
-            'g-recaptcha-response' => ['required_if:captcha_status,true', 'captcha'],
         ];
     }
 
