@@ -37,7 +37,7 @@
         <div class="col">
             <script src="https://cdn.polyfill.io/v2/polyfill.min.js" type="application/javascript"></script><div id="_g-recaptcha"></div>
             @if(config('boilerplate.access.captcha.configs.options.hidden'))
-                <style>.grecaptcha-badge{display:none;!important}</style>Z
+                <style>.grecaptcha-badge{display:none;!important}</style>
             @endif
             <div class="g-recaptcha"
                  data-sitekey="{{config('boilerplate.access.captcha.configs.site_key')}}"
