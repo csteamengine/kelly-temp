@@ -79,6 +79,7 @@ $('#projectImagePreview').on('show.bs.modal', function (event) {
     let modal = $(this);
     let imageOriginal = button.find('.largeImage');
     let image = imageOriginal.clone();
+    console.log(image);
     let element = modal.find('.modal-content');
 
     let height = imageOriginal.prop('naturalHeight');
