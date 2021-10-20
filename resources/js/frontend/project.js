@@ -57,7 +57,7 @@ function loadImage(image, imageElement, isLast = false){
 }
 
 function loadLargeImages(){
-    if(tilesLoaded && carouselLoaded){
+    if((tilesLoaded && carouselLoaded) || isMobile()){
         $('.carousel-item').each(function(){
             let imageElement = $(this);
             let image = $(this).data('modal-image');
@@ -75,6 +75,7 @@ function loadLargeImages(){
 }
 
 $('#projectImagePreview').on('show.bs.modal', function (event) {
+    console.log("Here");
     let button = $(event.relatedTarget);
     let modal = $(this);
     let imageOriginal = button.find('.largeImage');
@@ -97,3 +98,14 @@ $('#projectImagePreview').on('show.bs.modal', function (event) {
 
     element.html(image);
 })
+
+function isMobile(){
+    // credit to Timothy Huang for this regex test:
+    // https://dev.to/timhuang/a-simple-way-to-detect-if-browser-is-on-a-mobile-device-with-javascript-44j3
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        return true
+    }
+    else{
+        return false
+    }
+}
