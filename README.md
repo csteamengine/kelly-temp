@@ -4,7 +4,7 @@
 <br/>
 ![GitHub stars](https://img.shields.io/github/stars/csteamengine/modern-website-template.svg?style=social)
 
-### Demo Credentials (Test)
+### Demo Credentials
 
 **Admin:** admin@admin.com  
 **Password:** secret
