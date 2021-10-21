@@ -9,11 +9,11 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.0",
+        "php": "^7.4|^8.0",
         "ext-json": "*",
         "arcanedev/log-viewer": "8.x",
         "bensquire/php-color-extractor": "dev-master",
-        "darkghosthunter/laraguard": "dev-master",
+        "darkghosthunter/laraguard": "^3.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
