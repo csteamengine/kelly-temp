@@ -12,6 +12,6 @@
 </div>
 
 @push('after-scripts')
-    <script src="{{mix('js/frontend/projects.js')}}"></script>
+    <script src="{{mix('js/frontend/projects.js')}}" defer></script>
 @endpush
 
