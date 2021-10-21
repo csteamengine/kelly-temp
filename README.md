@@ -1,4 +1,4 @@
-## Modern Website Template
+## Kelly Devitt Ceramics
 
 ![Tests](https://github.com/csteamengine/modern-website-template/workflows/Tests/badge.svg?branch=master)
 <br/>
