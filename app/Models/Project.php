@@ -10,6 +10,9 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
+/**
+ * @property mixed id
+ */
 class Project extends Model implements HasMedia
 {
     use HasFactory,

@@ -8,7 +8,7 @@
 
 ?>
 <div class="row">
-    <div class="col-12 text-center">
+    <div class="col-12 text-center mb-5">
         <h3>Images</h3>
     </div>
 </div>
