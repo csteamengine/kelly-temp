@@ -40,7 +40,7 @@ class ThemeService extends BaseService
         try {
             $theme = $this->model::create([
                 'first_name' => $data['first_name'],
-                'last_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
                 'email' => $data['email'],
                 'phone' => $data['phone'],
                 'title' => $data['title'],
@@ -101,7 +101,7 @@ class ThemeService extends BaseService
         try {
             $theme->update([
                 'first_name' => $data['first_name'],
-                'last_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
                 'email' => $data['email'],
                 'phone' => $data['phone'],
                 'title' => $data['title'],
