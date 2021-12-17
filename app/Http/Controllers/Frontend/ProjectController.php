@@ -48,7 +48,7 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         //List all the projects
-        $projects = Project::where('is_active', true)->where('id', '!=', $project->id)->get();
+        $projects = Project::where('is_active', true)->where('id', '!=', $project->id)->orderBy('order')->get();
 
         //Shows all the info on a single project.
         return view('frontend.projects.show')->withProject($project)->withProjects($projects);
