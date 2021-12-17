@@ -34,7 +34,7 @@ class ProjectController extends Controller
     public function index()
     {
         //List all the projects
-        $projects = Project::where('is_active', true)->get();
+        $projects = Project::where('is_active', true)->orderBy('order')->get();
 
         return view('frontend.projects.index')->withProjects($projects);
     }
