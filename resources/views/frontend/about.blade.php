@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', __('Projects'))
+@section('title', __('About'))
 
 @push('before-styles')
 
